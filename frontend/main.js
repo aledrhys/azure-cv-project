@@ -2,7 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) =>{
     getVisitCount();
 })
 
-const functionApiUrl = 'http://localhost:7071/api/GetCVCounter';
+const functionApiUrl = 'https://getcvcounter.azurewebsites.net/api/GetCVCounter?code=NWCz1yGg4CTaF7c5DvAeKessC10nE9HJIctoNSPQAFH/lDy3EXbzFA=='
+const localFunctionApiUrl = 'http://localhost:7071/api/GetCVCounter';
 
 const getVisitCount = () => {
     let count = 30;
