@@ -1,6 +1,6 @@
 # Read me for my CV Project
 
-Hi, so this Repo contains details of my own azure CV which I created following project video from the awsome  A Cloud Guru site
+Hi, this Repo contains details of my own azure CV which I created following project video from the awsome  A Cloud Guru site
 
 ## First steps
 
