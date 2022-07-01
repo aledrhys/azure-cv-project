@@ -1,10 +1,10 @@
 name: Deploy_Backend
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-    - 'backend/**'
+    push:
+        branches: [ main ]
+        paths:
+        - 'backend/**'
 
 env:
   AZURE_FUNCTIONAPP_NAME: GetCVCounter  # set this to your application's name
@@ -13,13 +13,15 @@ env:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
-      uses: actions/checkout@v1
-
+      uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: 'Login via Azure CLI'
-      uses: azure/login@v1
+    - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
