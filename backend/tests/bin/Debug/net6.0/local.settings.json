@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureCVConnectionString": "AccountEndpoint=https://azure-cv-aled.documents.azure.com:443/;AccountKey=b9RpLdBNfN1aFSfdQP039hmboFuePiu6cdH8nNQlkwnCBeFy1Li7A5KX2UiENSE2RfHDj1qSDUorFirvDcBQYw==;"
+  },
+"Host":
+{
+  "CORS": "*"
+}
+
+}
