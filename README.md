@@ -15,4 +15,5 @@ Hi, this Repo contains details of my own azure CV which I created following proj
 - Hooked up the backend API to the frontend webpage so counter displays
 - Deployed static site to an Azure blob container
 - Setup Azure CDN for HTTPS and custom domain support so my Website can be made available on my domain :)
-- 
+- Added CI/CD via Github
+- Unit tests added
