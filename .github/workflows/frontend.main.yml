@@ -1,4 +1,4 @@
-name: Deploy_frontend
+name: Deploy_Frontend
 # Deploys when push made from frontend folder
 
 on:
