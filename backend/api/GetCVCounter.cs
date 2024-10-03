@@ -1,7 +1,3 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
@@ -10,6 +6,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Text;
 
+
 namespace Company.Function
 {
     public static class GetCVCounter
@@ -17,8 +14,8 @@ namespace Company.Function
         [FunctionName("GetCVCounter")]
         public static HttpResponseMessage Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
-            [CosmosDB(databaseName:"azure-cv-aled", collectionName: "Counter", ConnectionStringSetting = "AzureCVConnectionString", Id = "1", PartitionKey = "1")] Counter counter,
-            [CosmosDB(databaseName:"azure-cv-aled", collectionName: "Counter", ConnectionStringSetting = "AzureCVConnectionString", Id = "1", PartitionKey = "1")] out Counter updatedCounter,
+            [CosmosDB(databaseName:"azure-cv-aled", containerName: "Counter", Connection = "AzureCVConnectionString", Id = "1", PartitionKey = "1")] Counter counter,
+            [CosmosDB(databaseName:"azure-cv-aled", containerName: "Counter", Connection = "AzureCVConnectionString", Id = "1", PartitionKey = "1")] out Counter updatedCounter,
 
             ILogger log)
         {
@@ -35,5 +32,6 @@ namespace Company.Function
                 Content = new StringContent(jsonToReturn, Encoding.UTF8, "application/json")
             };
         }
+
     }
 }
